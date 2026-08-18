@@ -7,7 +7,7 @@ First example: XOR classification problem w/ single net inspired by Syntax/CJ's 
 
 ## Tom's AI Stance
 
-Automate the wallpaper (e.g. citation/citation generators), build the foundations/furniture by hand.  This README's initial commit was AI-generated; realized that was a bad look for a supposedly-human-generated repo.  Key desire is to use my time to learn the math and algorithms, not improve my typing skills.
+Automate the wallpaper (e.g. results/citation generators), build the foundations/furniture by hand.  This README's initial commit was AI-generated; realized that was a bad look for a supposedly-human-generated repo.  Key desire is to use my time to learn the math and algorithms, not improve my typing skills.
 
 ## Usage (XOR Example)
 
