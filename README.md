@@ -1,10 +1,28 @@
-# NeuralNetwork
+# HoomanLearning
 
 Human learning-oriented from-scratch neural network builds.
 
-A small from-scratch neural-network playground focused first on learning XOR with a single hidden layer. The current trainer implements the forward pass, backpropagation, gradient descent updates, saving/loading weights, loss plotting, and a reproducible Markdown training-results report using NumPy.
+A small (from-scratch) neural-network sandbox.
+First example: XOR classification problem w/ single net inspired by Syntax/CJ's "I Built an LLM from Scratch" YouTube video: https://www.youtube.com/watch?v=YmLp8qe87A0 .
 
-## Current Model
+## Usage (XOR Example)
+
+From the top-level directory:
+
+# Train:
+
+```bash
+python .\train\train_SingleHiddenLayer_XOR.py
+
+# Results:
+- pyplot pops up showing training loss over epochs -- Code is currently programmed to terminate when a threshold loss is achieved (later iterations will use dropout for more-sophisticated control of training)
+- Results Markdown with hyperparameters and outcomes appears in \runtimes\results\<your_model_name_here>_results.md
+
+# Run:
+
+```python .\runtimes\xor_runtime.py
+
+## XOR Architecture
 
 The main working example is a single-hidden-layer feedforward neural network for XOR:
 
@@ -16,7 +34,7 @@ The main working example is a single-hidden-layer feedforward neural network for
 - Optimizer: full-batch gradient descent
 - Dataset: `train/data/train_XOR.json`
 
-This project is intentionally explicit rather than highly vectorized. Many operations are written with loops so the chain-rule/backpropagation mechanics stay visible.
+I used element-wise operations rather than vector math for accounting/auditing during debug.  Future iterations will (should) be vector-based.
 
 ## Repository Layout
 
@@ -43,8 +61,16 @@ This project is intentionally explicit rather than highly vectorized. Many opera
 ## Requirements
 
 - Python 3.14 or compatible modern Python 3
+  - pathlib
+  - json
+  - sys
+  - datetime
+  - re
 - NumPy
 - Matplotlib
+
+
+- Custom library files in /utils
 
 Install dependencies with:
 
@@ -52,14 +78,7 @@ Install dependencies with:
 pip install numpy matplotlib
 ```
 
-## Train XOR
-
-From the repository root:
-
-```bash
-python train/train_SingleHiddenLayer_XOR.py
-```
-
+## Training Notes
 The trainer will:
 
 1. Load `train/data/train_XOR.json`.
@@ -92,13 +111,16 @@ The Markdown output is meant for a reader who already knows neural networks and 
 
 ## Extending
 
-Good next steps for this project:
+Next steps:
 
-- Vectorize the dense-layer math with NumPy matrix operations.
-- Generalize helpers to support multiple hidden layers.
-- Add deterministic seeds for exact reproducibility.
-- Add binary cross-entropy as an alternative loss.
-- Add gradient checking with finite differences.
-- Add a small convolution-forward-pass experiment.
+- Input scaling/normalization/regularization.
+- Smarter weights initialization (automated exploration of loss surfaces prior to training).
+- Vector/matrix operations in place of element-wise ops.
+- Further helper generalization to support multiple hidden layers.
+- Seeding for reproducibility.
+- Cross-entropy loss (opens gate for MNIST?)
+- Finite difference checks on gradient
+- Dropout on biases/weights
+- Convolution?  Variable-width network?  
 
-When adding a new network, keep the trainer responsible for training and pass a standard result dictionary into `utils/results.py` for reporting.
+Note: When adding a new network, keep the trainer responsible for training and pass a standard result dictionary into `utils/results.py` for reporting.
