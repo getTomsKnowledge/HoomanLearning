@@ -3,7 +3,7 @@
 Human learning-oriented from-scratch neural network builds.
 
 A small (from-scratch) neural-network sandbox.
-First example: XOR classification problem w/ single net inspired by Syntax/CJ's "<a ref=https://www.youtube.com/watch?v=YmLp8qe87A0>I Built an LLM from Scratch</a>."
+First example: XOR classification problem w/ single net inspired by Syntax/CJ's "[I Built an LLM from Scratch](https://www.youtube.com/watch?v=YmLp8qe87A0)."
 
 ## Tom's AI Stance
 
