@@ -3,11 +3,11 @@
 Human learning-oriented from-scratch neural network builds.
 
 A small (from-scratch) neural-network sandbox.
-First example: XOR classification problem w/ single net inspired by Syntax/CJ's "I Built an LLM from Scratch" YouTube video: https://www.youtube.com/watch?v=YmLp8qe87A0 .
+First example: XOR classification problem w/ single net inspired by Syntax/CJ's "<a ref=https://www.youtube.com/watch?v=YmLp8qe87A0>I Built an LLM from Scratch</a>."
 
 ## Tom's AI Stance
 
-Automate the wallpaper (e.g. citation/citation generators), build the foundations/furniture by hand.  This README's initial commit was AI-generated; realized that was a bad look for a supposedly-human-generated repo.  Key desireis to use my time to learn the math and algorithms, not improve my typing skills.
+Automate the wallpaper (e.g. citation/citation generators), build the foundations/furniture by hand.  This README's initial commit was AI-generated; realized that was a bad look for a supposedly-human-generated repo.  Key desire is to use my time to learn the math and algorithms, not improve my typing skills.
 
 ## Usage (XOR Example)
 
@@ -25,7 +25,8 @@ python .\train\train_SingleHiddenLayer_XOR.py
 
 ### Run:
 
-```python .\runtimes\xor_runtime.py
+```python
+python .\runtimes\xor_runtime.py
 ```
 
 ## XOR Architecture
